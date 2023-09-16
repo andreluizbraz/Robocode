@@ -1,0 +1,26 @@
+package andreluizbraz;
+import robocode.*;
+import java.awt.Color;
+
+/**
+ * andreluizbraz - a class by (andreluizbraz)
+ */
+public class andreluizbraz extends Robot {
+    public void run() {
+		setColors(Color.red,Color.green,Color.orange,Color.white,Color.black);
+		while (true) {
+			ahead(100);
+		    back(25);
+		    turnRight(40);
+		    turnLeft(90);
+		}
+	}
+	public void onScannedRobot(ScannedRobotEvent e) {
+		fire(3);
+	}
+	//bater na parede 
+	public void onHitWall(HitWallEvent e) {
+		back(35);
+		turnRight(90);
+	}
+}
